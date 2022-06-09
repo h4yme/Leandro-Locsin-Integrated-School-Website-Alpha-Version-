@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION FORM</title>
+	<link rel="stylesheet" href="style3.css">
+	<link rel="icon" href="193305886_531198874891038_3778216067318682711_n.png">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+</head>
+<nav>
+ 		<a href="index.html"><img src="193305886_531198874891038_3778216067318682711_n.png"width="100px"></a>&nbsp;&nbsp;&nbsp;
+ 		<a href="index.html"><img src="20211105_165145.png" width="340px" class="name"></a>
+        <div class="nav-links" id="navLinks"> 
+        	<i class="fa fa-times"onclick="hideMenu()"> </i>
+        	<ul>
+        		<li><a href="index.html" onclick="hideMenu()">HOME</li></a>
+        		<li ><a href="#" onclick="hideMenu()">ENROLLMENT (S.Y 2021-2022)</li></a>
+        		<li><a href="about-school.html" onclick="hideMenu()">ABOUT</li></a>
+        		<li><a id="myBTN" onclick="hideMenu()"> CONTACT DETAILS</li></a>
+				<li><a href="" onclick="hideMenu()">DEVELOPERS</li></a>
+
+        	</ul>
+         </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+ 	</nav>
+     <hr><br><br>
+
+<body>
+ <form action="databaseprac.php" method="post">
+   <img class="bgimg"src="256655394_1020591965191973_3599353844330269193_n.jpg" width="1200px">
+<h3 class="title"align="center">STUDENT ENROLLMENT FORM</h3>
+ <div class="table">
+
+<table align="center">
+
+<tr>
+<td>FIRST NAME:</td>
+<td><input type="text" name="fname" placeholder="enter firstname">
+</td>
+</tr>
+
+<tr>
+<td>MIDDLE NAME:</td>
+<td><input type="text" name="mname" placeholder="enter middlename">
+</td>
+</tr>
+ 
+<tr>
+<td>LAST NAME:</td>
+<td><input type="text" name="lname" placeholder="enter lastname">
+</td>
+</tr>
+ 
+<tr>
+<td>GRADE AND STRAND:</td>
+<td> 
+		<input list="grade" name="grade1" placeholder="PICK GRADE/STRAND">
+	    <datalist id="grade">
+	    	<option value="ICT 11 (Programming, CSS, Tech Draft/Animation)">
+	    		<option value="STEM 11">
+	    			<option value="HUMMS 11">
+	    				<option value="GAS 11">
+	    					<option value="ICT 12 (Programming, CSS, Tech Draft/Animation)">
+	    						<option value="STEM 12">
+	    							<option value="HUMMS 12">
+	    								<option value="GAS 12">
+	    </datalist>
+</td>
+</tr>
+
+<tr>
+<td>DATE OF BIRTH:</td>
+ 
+<td>
+<input type="date" name="birthdate"></td>
+<bn>
+<tr>
+<td>PLACE OF BIRTH:<br><br><br></td>
+<td><textarea name="place" rows="4" cols="30" placeholder="enter place of birth"></textarea></td>
+</tr>
+
+<tr>
+<td>EMAIL ADDRESS:</td>
+<td><input type="text" name="email" maxlength="100" placeholder="enter email address"/></td>
+</tr>
+ 
+<tr>
+<td>MOBILE NUMBER:</td>
+<td>
+<input type="text" name="mnum" maxlength="11" placeholder="enter mobile number"/>
+(11 digit number)
+</td>
+</tr>
+ 
+<tr>
+<td>GENDER:</td>
+<td>
+<input type="radio" name="gend" value="Male">&nbsp;Male
+<input type="radio" name="gend" value="Female">&nbsp;Female
+</td>
+</tr>
+
+ 
+<tr>
+<td>ADDRESS:<br><br><br></td>
+<td><textarea name="add" rows="4" cols="30"  placeholder="enter address"></textarea></td>
+</tr>
+ 
+<tr>
+<td>CITY:</td>
+<td><input type="text" name="city" maxlength="30"  placeholder="enter city">
+(max 30 characters)
+</td>
+</tr>
+ 
+<tr>
+<td>PIN CODE:</td>
+<td><input type="text" name="pin" maxlength="6"  placeholder="enter pincode">
+(6 digit number)
+</td>
+</tr>
+<tr>
+<td>INSERT 1x1 Photo:</td>
+
+  <td><input type="file" id="myFile" name="filen"></td>
+</tr>
+<tr>
+<td><button class="button"name="register" >SUBMIT</button>
+</tr>
+</table>
+</form>
+<br>
+<br>
+  
+
+ <!-- Modal content -->
+    <div id="myModal" class="modal">
+
+	
+	<div class="modal-content">
+	  <div class="modal-header">
+		<span class="close">&times;</span>
+		<h2>CONTACT DETAILS</h2>
+	  </div>
+	  <div class="modal-body">
+		  
+		<h4>Junior High School</h4>
+		<p>09999044002</p><br>
+		<h4>Senior High School</h4>
+		<p>09183260512</p><br>
+		<h4>Registrar</h4>
+		<p>09674673974 | Landline: 8353-6069</p>
+		
+
+
+	  </div>
+	  <div class="modal-footer">
+		<h3>LEANDRO LOCSIN INTEGRATED SCHOOL</h3>
+	  </div>
+	</div>
+  
+  </div>
+  
+  <script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBTN");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+	modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+	modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+	if (event.target == modal) {
+	  modal.style.display = "none";
+	}
+  }
+  </script>
+</body>
+</html>
